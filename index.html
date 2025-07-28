@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Richard Joseph | Web3 Educator, Solidity Developer, Entrepreneur</title>
+    <meta name="description" content="Richard Joseph is a professional Web3 Educator, Ethereum Solidity Developer, and Entrepreneur with over 6 years of experience in the blockchain industry. Founder of Lynx Web3 Academy and Co-founder of Web3 Africa.">
+    <meta name="keywords" content="Richard Joseph, Web3, Blockchain, Solidity, Ethereum, Developer, Educator, Entrepreneur, Web3 Africa, Lynx Web3 Academy, GaiaNet AI, Nigeria, Africa">
+    <meta name="author" content="Richard Joseph">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://richardjoseph.com/"> <meta property="og:title" content="Richard Joseph | Web3 Educator, Solidity Developer, Entrepreneur">
+    <meta property="og:description" content="Building the future of the decentralized web in Africa and beyond.">
+    <meta property="og:image" content="https://www.example.com/richard-joseph-og-image.jpg"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://richardjoseph.com/"> <meta property="twitter:title" content="Richard Joseph | Web3 Educator, Solidity Developer, Entrepreneur">
+    <meta property="twitter:description" content="Building the future of the decentralized web in Africa and beyond.">
+    <meta property="twitter:image" content="https://www.example.com/richard-joseph-og-image.jpg"> <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>RJ</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-[#0a0a0a] text-gray-300 font-['Poppins'] leading-relaxed;
+            }
+            h1, h2, h3 {
+                @apply text-white font-semibold;
+            }
+            h2 {
+                @apply text-3xl md:text-4xl mb-4 text-center;
+            }
+            section {
+                @apply py-20 md:py-28;
+            }
+        }
+        .accent-gradient {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .nav-link {
+            @apply text-gray-300 hover:text-cyan-400 transition-colors duration-300;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-[#0a0a0a]/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white">Richard Joseph.</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#writing" class="nav-link">Writing</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden z-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-[#0a0a0a]">
+            <nav class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#writing" class="nav-link">Writing</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-grid-gray-900/[0.2]">
+            <div class="container mx-auto px-6">
+                <div class="reveal-up">
+                    <img src="https://via.placeholder.com/150" alt="Richard Joseph" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-gray-700 shadow-xl">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-2">Richard Joseph</h1>
+                    <p class="text-xl md:text-2xl font-light mb-8">
+                        <span class="accent-gradient">Web3 Educator</span> | Solidity Dev | Entrepreneur
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#projects" class="bg-cyan-500 text-white font-semibold py-3 px-8 rounded-full hover:bg-cyan-600 transition-all duration-300">View Projects</a>
+                        <a href="#contact" class="bg-gray-700 text-white font-semibold py-3 px-8 rounded-full hover:bg-gray-600 transition-all duration-300">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container mx-auto px-6">
+                <div class="reveal-up">
+                    <h2 class="text-center"><span class="accent-gradient">About Me</span></h2>
+                    <p class="max-w-3xl mx-auto text-center text-lg text-gray-400 mb-12">Pioneering the future of decentralization and digital empowerment across Africa.</p>
+                </div>
+                <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-2 reveal-left">
+                         <img src="https://via.placeholder.com/400x500" alt="Richard Joseph in action" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                    </div>
+                    <div class="md:col-span-3 space-y-6 text-lg text-gray-300 reveal-right">
+                        <p>With over six years deep in the blockchain and Web3 space, I've dedicated my career to not just building innovative technology but also to educating and empowering the next wave of talent in Africa.</p>
+                        <p>My journey began with a fascination for the potential of decentralization. This led me to master Ethereum and Solidity, developing robust smart contracts and full-stack decentralized applications. But I quickly realized that technology alone isn't enough; education is the key to mass adoption.</p>
+                        <p>Driven by this mission, I co-founded <span class="text-cyan-400 font-semibold">Web3 Africa</span> to create a pan-African ecosystem for builders and creators. I also founded <span class="text-cyan-400 font-semibold">Lynx Web3 Academy</span> to provide structured, high-quality education for aspiring developers and enthusiasts.</p>
+                        <p>As an ambassador for <span class="text-cyan-400 font-semibold">GaiaNet AI</span>, I am at the forefront of merging decentralized systems with artificial intelligence, advocating for a future where technology is both powerful and equitably distributed. My goal is to create tangible opportunities and foster a self-sustaining digital economy across the continent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tech-stack" class="bg-[#111111]">
+            <div class="container mx-auto px-6">
+                 <div class="reveal-up">
+                    <h2 class="text-center mb-12">My <span class="accent-gradient">Tech Stack</span></h2>
+                 </div>
+                 <div class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-8 md:gap-12 reveal-up">
+                    <div class="text-center space-y-2">
+                        <p class="text-6xl">🛠️</p>
+                        <span class="font-semibold text-gray-300">Solidity</span>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <p class="text-6xl">💻</p>
+                        <span class="font-semibold text-gray-300">JavaScript (ES6+)</span>
+                    </div>
+                     <div class="text-center space-y-2">
+                        <p class="text-6xl">⚛️</p>
+                        <span class="font-semibold text-gray-300">React</span>
+                    </div>
+                     <div class="text-center space-y-2">
+                        <p class="text-6xl">🟢</p>
+                        <span class="font-semibold text-gray-300">Node.js</span>
+                    </div>
+                     <div class="text-center space-y-2">
+                        <p class="text-6xl">💨</p>
+                        <span class="font-semibold text-gray-300">TailwindCSS</span>
+                    </div>
+                     <div class="text-center space-y-2">
+                        <p class="text-6xl">🔗</p>
+                        <span class="font-semibold text-gray-300">Ethers.js</span>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container mx-auto px-6">
+                <div class="reveal-up">
+                    <h2 class="text-center">Featured <span class="accent-gradient">Projects & Initiatives</span></h2>
+                    <p class="max-w-3xl mx-auto text-center text-lg text-gray-400 mb-12">A look into the ventures and technologies I'm building and supporting.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">Lynx Web3 Academy</h3>
+                        <p class="text-gray-400 mb-4">As the founder, I'm building Africa's premier platform for Web3 education, offering courses in Solidity, dApp development, and NFT creation to onboard the next million developers.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 100ms;">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">Web3 Africa Initiative</h3>
+                        <p class="text-gray-400 mb-4">Co-founded to foster a collaborative and innovative blockchain ecosystem across Africa through events, incubation, and community-building efforts.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">Explore the Initiative &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 200ms;">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">GaiaNet AI Ambassador</h3>
+                        <p class="text-gray-400 mb-4">Representing a decentralized AI compute network, I advocate for community-owned AI infrastructure and help grow its ecosystem in the African market.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">About GaiaNet AI &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">NFT Marketplace Contract</h3>
+                        <p class="text-gray-400 mb-4">An advanced, gas-optimized Solidity smart contract for a full-featured NFT marketplace, supporting ERC-721 and ERC-1155 standards, auctions, and royalties.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">View on GitHub &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 100ms;">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">DeFi Staking dApp</h3>
+                        <p class="text-gray-400 mb-4">A full-stack decentralized application allowing users to stake tokens and earn rewards, complete with a React frontend and secure, audited smart contracts.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">View Live Demo &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 200ms;">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-400">Crypto Onboarding Portal</h3>
+                        <p class="text-gray-400 mb-4">A user-friendly platform designed to simplify the process of entering the crypto space for beginners in Africa, with guides, wallet setups, and security tips.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">Check it out &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="writing" class="bg-[#111111]">
+            <div class="container mx-auto px-6">
+                <div class="reveal-up">
+                    <h2 class="text-center">My <span class="accent-gradient">Writing</span></h2>
+                    <p class="max-w-3xl mx-auto text-center text-lg text-gray-400 mb-12">Sharing knowledge on Web3, smart contracts, and the future of technology.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card">
+                        <p class="text-sm text-gray-500 mb-2">MEDIUM ARTICLE</p>
+                        <h3 class="text-xl font-bold mb-3">Understanding Gas Fees on Ethereum</h3>
+                        <p class="text-gray-400 mb-4">A deep dive into how transaction fees work on the Ethereum network and best practices for optimizing gas in your smart contracts.</p>
+                        <a href="#" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Article &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 100ms;">
+                        <p class="text-sm text-gray-500 mb-2">TWITTER/X THREAD</p>
+                        <h3 class="text-xl font-bold mb-3">The Rise of Decentralized AI</h3>
+                        <p class="text-gray-400 mb-4">Exploring the intersection of AI and blockchain, and why decentralized networks like GaiaNet AI are crucial for an open digital future.</p>
+                        <a href="#" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Thread &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 200ms;">
+                        <p class="text-sm text-gray-500 mb-2">WHITEPAPER</p>
+                        <h3 class="text-xl font-bold mb-3">A Framework for Web3 Education in Africa</h3>
+                        <p class="text-gray-400 mb-4">A detailed paper outlining the strategy and curriculum framework for Lynx Web3 Academy's mission to upskill the continent.</p>
+                        <a href="#" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Download PDF &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events">
+            <div class="container mx-auto px-6">
+                <div class="reveal-up">
+                    <h2 class="text-center">Speaking & <span class="accent-gradient">Events</span></h2>
+                    <p class="max-w-3xl mx-auto text-center text-lg text-gray-400 mb-12">Hosting conversations and sharing insights on the digital stage.</p>
+                </div>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card">
+                        <p class="text-sm text-gray-500 mb-2">TWITTER/X SPACE</p>
+                        <h3 class="text-xl font-bold mb-3">Weekly Web3 Roundup</h3>
+                        <p class="text-gray-400 mb-4">My regular Twitter/X Space where I host industry leaders to discuss the latest trends, news, and breakthroughs in the Web3 ecosystem.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">Listen to Recordings &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 100ms;">
+                        <p class="text-sm text-gray-500 mb-2">CONFERENCE TALK</p>
+                        <h3 class="text-xl font-bold mb-3">Building for Africa: A Web3 Perspective</h3>
+                        <p class="text-gray-400 mb-4">A keynote speech delivered at Africa Tech Summit on the unique opportunities and challenges of developing blockchain solutions for the African market.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">Watch on YouTube &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 200ms;">
+                        <p class="text-sm text-gray-500 mb-2">LIVE WORKSHOP</p>
+                        <h3 class="text-xl font-bold mb-3">Intro to Solidity: Live Coding Session</h3>
+                        <p class="text-gray-400 mb-4">A hands-on virtual workshop for Lynx Web3 Academy students, guiding them through the process of writing and deploying their first smart contract.</p>
+                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">Access Course Materials &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-[#111111]">
+            <div class="container mx-auto px-6 text-center">
+                <div class="reveal-up">
+                    <h2 class="text-center">Get In <span class="accent-gradient">Touch</span></h2>
+                    <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-12">I'm always open to discussing new projects, partnerships, or educational opportunities. Feel free to reach out.</p>
+                </div>
+                
+                <div class="max-w-xl mx-auto reveal-up">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                            <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                        </div>
+                        <textarea name="message" placeholder="Your Message" rows="5" required class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"></textarea>
+                        <button type="submit" class="bg-cyan-500 text-white font-semibold py-3 px-12 rounded-full hover:bg-cyan-600 transition-all duration-300">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="mt-16 reveal-up">
+                    <p class="text-lg text-white mb-4">Or connect with me on social media:</p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.286 2.553 7.94 6.205 9.488.45.082.615-.195.615-.434 0-.215-.008-.975-.012-1.72-2.48.538-3.003-1.07-3.003-1.07-.41-1.04-1-1.317-1-1.317-.818-.56.062-.548.062-.548.905.063 1.383.93 1.383.93.803 1.378 2.11.98 2.625.75.082-.583.313-1.033.57-1.27-1.998-.228-4.1-1-4.1-4.448 0-.98.35-1.783.923-2.41-.093-.23-.398-1.14.088-2.375 0 0 .753-.24 2.468.922.715-.198 1.48-.297 2.24-.3.76.003 1.525.102 2.24.3 1.714-1.162 2.465-.922 2.465-.922.487 1.235.182 2.145.09 2.375.575.627.922 1.43.922 2.41 0 3.46-2.105 4.218-4.108 4.44.322.278.61.825.61 1.662 0 1.2-.01 2.168-.01 2.46 0 .24.163.52.618.432C19.447 19.94 22 16.285 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.206v4.248H8.014V8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.71zM4.938 7.414a1.248 1.248 0 11-2.496 0 1.248 1.248 0 012.496 0zM6.187 8.59H3.692v7.748h2.495V8.59zM18 2H6a4 4 0 00-4 4v12a4 4 0 004 4h12a4 4 0 004-4V6a4 4 0 00-4-4z" clip-rule="evenodd" /></svg>
+                        </a>
+                         <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6.375a2.43 2.43 0 00-1.74-1.74C18.6 4.125 12 4.125 12 4.125s-6.6 0-8.26.51A2.43 2.43 0 002 6.375v11.25c0 1.485 1.215 2.7 2.7 2.7h14.6c1.485 0 2.7-1.215 2.7-2.7V6.375zM9.75 16.5v-9L16.5 12l-6.75 4.5z"/></svg> </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16">
+            <div class="container mx-auto px-6 text-center reveal-up">
+                 <a href="/path/to/your/cv.pdf" download="Richard_Joseph_CV.pdf" class="inline-block bg-gray-700 text-white font-semibold py-4 px-10 rounded-full hover:bg-gray-600 transition-all duration-300 text-lg">
+                    Download My CV
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="border-t border-gray-800">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Richard Joseph. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // ScrollReveal Animations
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 1500,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            reset: false,
+        });
+
+        sr.reveal('.reveal-up', { origin: 'bottom', interval: 100 });
+        sr.reveal('.reveal-left', { origin: 'left' });
+        sr.reveal('.reveal-right', { origin: 'right' });
+        sr.reveal('.reveal-card', { origin: 'bottom', interval: 150 });
+        
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if(this.getAttribute('href').length > 1) {
+                   e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    }); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>
