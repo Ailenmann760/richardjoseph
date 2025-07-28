@@ -104,7 +104,18 @@
                 </div>
                 <div class="grid md:grid-cols-5 gap-12 items-center">
                     <div class="md:col-span-2 reveal-left">
-                         <img src="https://via.placeholder.com/400x500" alt="Richard Joseph in action" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                        <div class="rounded-lg shadow-2xl overflow-hidden">
+                            <video
+                                autoplay
+                                loop
+                                muted
+                                playsinline
+                                class="w-full h-full object-cover"
+                            >
+                                <source src="IMG_20250727_223838_091.mp4" type="video/mp4">
+                                Your browser does not support the video tag. Please use a modern browser to see this content.
+                            </video>
+                        </div>
                     </div>
                     <div class="md:col-span-3 space-y-6 text-lg text-gray-300 reveal-right">
                         <p>With over six years deep in the blockchain and Web3 space, I've dedicated my career to not just building innovative technology but also to educating and empowering the next wave of talent in Africa.</p>
@@ -156,7 +167,7 @@
                     <h2 class="text-center">Featured <span class="accent-gradient">Projects & Initiatives</span></h2>
                     <p class="max-w-3xl mx-auto text-center text-lg text-gray-400 mb-12">A look into the ventures and technologies I'm building and supporting.</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card">
                         <h3 class="text-xl font-bold mb-2 text-cyan-400">Lynx Web3 Academy</h3>
                         <p class="text-gray-400 mb-4">As the founder, I'm building Africa's premier platform for Web3 education, offering courses in Solidity, dApp development, and NFT creation to onboard the next million developers.</p>
@@ -172,20 +183,10 @@
                         <p class="text-gray-400 mb-4">Representing a decentralized AI compute network, I advocate for community-owned AI infrastructure and help grow its ecosystem in the African market.</p>
                         <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">About GaiaNet AI &rarr;</a>
                     </div>
-                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card">
-                        <h3 class="text-xl font-bold mb-2 text-cyan-400">NFT Marketplace Contract</h3>
-                        <p class="text-gray-400 mb-4">An advanced, gas-optimized Solidity smart contract for a full-featured NFT marketplace, supporting ERC-721 and ERC-1155 standards, auctions, and royalties.</p>
-                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">View on GitHub &rarr;</a>
-                    </div>
-                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 100ms;">
-                        <h3 class="text-xl font-bold mb-2 text-cyan-400">DeFi Staking dApp</h3>
-                        <p class="text-gray-400 mb-4">A full-stack decentralized application allowing users to stake tokens and earn rewards, complete with a React frontend and secure, audited smart contracts.</p>
-                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">View Live Demo &rarr;</a>
-                    </div>
-                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 200ms;">
-                        <h3 class="text-xl font-bold mb-2 text-cyan-400">Crypto Onboarding Portal</h3>
-                        <p class="text-gray-400 mb-4">A user-friendly platform designed to simplify the process of entering the crypto space for beginners in Africa, with guides, wallet setups, and security tips.</p>
-                        <a href="#" class="font-semibold text-white hover:text-cyan-400 transition-colors">Check it out &rarr;</a>
+                    <div class="bg-gray-800 border-2 border-dashed border-gray-600 rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-center items-center text-center reveal-card" style="transition-delay: 300ms;">
+                        <h3 class="text-xl font-bold mb-2 text-white">My GitHub Repositories</h3>
+                        <p class="text-gray-400 mb-4">Explore my open-source work, including Solidity smart contracts, dApp frontends, and other blockchain-related projects.</p>
+                        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">View on GitHub &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -200,21 +201,39 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card">
                         <p class="text-sm text-gray-500 mb-2">MEDIUM ARTICLE</p>
-                        <h3 class="text-xl font-bold mb-3">Understanding Gas Fees on Ethereum</h3>
-                        <p class="text-gray-400 mb-4">A deep dive into how transaction fees work on the Ethereum network and best practices for optimizing gas in your smart contracts.</p>
-                        <a href="#" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Article &rarr;</a>
+                        <h3 class="text-xl font-bold mb-3">The Engine of Trust: A Deep Dive into Blockchain Technology</h3>
+                        <p class="text-gray-400 mb-4">An exploration of the fundamental principles that make blockchain a revolutionary technology for trust and transparency.</p>
+                        <a href="https://crypgo.medium.com/the-engine-of-trust-a-deep-dive-into-blockchain-technology-86e6b79e78a9" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Article &rarr;</a>
                     </div>
                     <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 100ms;">
-                        <p class="text-sm text-gray-500 mb-2">TWITTER/X THREAD</p>
-                        <h3 class="text-xl font-bold mb-3">The Rise of Decentralized AI</h3>
-                        <p class="text-gray-400 mb-4">Exploring the intersection of AI and blockchain, and why decentralized networks like GaiaNet AI are crucial for an open digital future.</p>
-                        <a href="#" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Thread &rarr;</a>
+                        <p class="text-sm text-gray-500 mb-2">MEDIUM ARTICLE</p>
+                        <h3 class="text-xl font-bold mb-3">What determines the price of cryptocurrencies?</h3>
+                        <p class="text-gray-400 mb-4">A breakdown of the market dynamics, technical factors, and investor sentiment that influence cryptocurrency valuations.</p>
+                        <a href="https://lynxacademy.medium.com/what-determines-the-price-of-cryptocurrencies-21e59feee3f0" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Article &rarr;</a>
                     </div>
                     <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 200ms;">
-                        <p class="text-sm text-gray-500 mb-2">WHITEPAPER</p>
-                        <h3 class="text-xl font-bold mb-3">A Framework for Web3 Education in Africa</h3>
-                        <p class="text-gray-400 mb-4">A detailed paper outlining the strategy and curriculum framework for Lynx Web3 Academy's mission to upskill the continent.</p>
-                        <a href="#" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Download PDF &rarr;</a>
+                        <p class="text-sm text-gray-500 mb-2">MEDIUM ARTICLE</p>
+                        <h3 class="text-xl font-bold mb-3">What is mining, and how do you mine crypto?</h3>
+                        <p class="text-gray-400 mb-4">A comprehensive guide to the process of crypto mining, from Proof-of-Work consensus to setting up a mining rig.</p>
+                        <a href="https://lynxacademy.medium.com/what-is-mining-and-how-do-you-mine-crypto-f1aba6a0cadc" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Article &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card">
+                        <p class="text-sm text-gray-500 mb-2">MEDIUM ARTICLE</p>
+                        <h3 class="text-xl font-bold mb-3">What is play-to-earn, and what do I need to know about it?</h3>
+                        <p class="text-gray-400 mb-4">An overview of the P2E gaming model, its economic implications for players, and its future in the metaverse.</p>
+                        <a href="https://lynxacademy.medium.com/what-is-play-to-earn-and-what-do-i-need-to-know-about-it-1469b8be1f30" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Article &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 100ms;">
+                        <p class="text-sm text-gray-500 mb-2">MEDIUM ARTICLE</p>
+                        <h3 class="text-xl font-bold mb-3">Nodes in Blockchain and Their Operational Mechanisms</h3>
+                        <p class="text-gray-400 mb-4">A technical look into the role of nodes in maintaining network integrity, security, and decentralization.</p>
+                        <a href="https://dekript.medium.com/nodes-in-blockchain-and-their-operational-mechanisms-4c4a81580e61" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Article &rarr;</a>
+                    </div>
+                    <div class="bg-[#171717] rounded-lg p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300 reveal-card" style="transition-delay: 200ms;">
+                        <p class="text-sm text-gray-500 mb-2">MEDIUM ARTICLE</p>
+                        <h3 class="text-xl font-bold mb-3">Real World Assets (RWA) and Blockchain - Opening Up New Opportunities</h3>
+                        <p class="text-gray-400 mb-4">Analyzing how tokenizing real-world assets is bridging traditional finance with the decentralized economy.</p>
+                        <a href="https://dekript.medium.com/real-world-assets-rwa-and-blockchain-opening-up-new-opportunities-5323fcdeb121" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">Read Article &rarr;</a>
                     </div>
                 </div>
             </div>
