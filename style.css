@@ -1,0 +1,70 @@
+/* Import Tailwind's base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define custom styles in the 'base' layer */
+@layer base {
+    body {
+        @apply bg-[#050816] text-[#aaa6c3] font-['Inter'] leading-relaxed;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-[#f3f3f3] font-['Space Grotesk'] font-bold;
+    }
+    section {
+        /* Add overflow-x-hidden to prevent horizontal scrollbars from animations */
+        @apply py-24 md:py-32 overflow-x-hidden;
+    }
+}
+
+/* Animated Gradient Border for Cards */
+.animated-card {
+    @apply bg-[#100d25] p-5 rounded-2xl relative transition-all duration-300 ease-in-out;
+    border: 1px solid rgba(145, 94, 255, 0.2);
+}
+
+.animated-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(145, 94, 255, 0.1);
+    border-color: rgba(145, 94, 255, 0.5);
+}
+
+/* Accent Gradient Text */
+.accent-gradient {
+    background: linear-gradient(90deg, #915EFF, #C07CF8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Nav Link Style */
+.nav-link {
+    @apply relative text-[#aaa6c3] hover:text-white transition-colors duration-300 text-lg;
+}
+
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-[-4px] left-0 w-0 h-[2px] bg-purple-500 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+    @apply w-full;
+}
+
+/* Fading Animation on Scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typing Cursor Style */
+.typed-cursor {
+    @apply text-purple-400 text-3xl md:text-5xl align-middle;
+}
