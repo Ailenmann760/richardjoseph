@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
     fadeInElements.forEach(el => fadeObserver.observe(el));
-    
+
     // --- Active Nav Link on Scroll (Scroll Spy) ---
     const sections = document.querySelectorAll('section');
     const headerNavLinks = document.querySelectorAll('#main-header .nav-link');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 activateNavLink(entry.target.id);
             }
         });
-    }, { rootMargin: '-30% 0px -70% 0px' }); // Activates when section is in the middle 40% of the viewport
+    }, { rootMargin: '-30% 0px -70% 0px' }); 
 
     sections.forEach(sec => scrollSpyObserver.observe(sec));
 
