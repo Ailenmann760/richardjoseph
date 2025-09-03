@@ -39,24 +39,27 @@
     @apply w-full;
   }
 
+  /* MODIFIED: Section title font size to 14px equivalent */
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center text-white;
+    @apply text-[14px] font-bold uppercase tracking-widest text-center text-white;
   }
   
   .section-subtitle {
     @apply max-w-2xl mx-auto text-center text-lg text-secondary mt-3;
   }
 
+  /* MODIFIED: Button font size and weight */
   .btn-primary {
-    @apply bg-accent text-white font-semibold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300 inline-block;
+    @apply bg-accent text-white font-bold text-[14px] py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300 inline-block;
   }
 
   .ui-card {
-    @apply bg-primary/50 p-6 rounded-lg border border-white/10 transition-all duration-300 hover:border-accent hover:bg-white/5;
+    @apply bg-primary/50 p-6 rounded-lg border border-white/10 transition-all duration-300 hover:border-accent hover:bg-white/5 flex flex-col;
   }
 
+  /* MODIFIED: Card title font size to 12px and bold */
   .card-title {
-    @apply text-xl font-bold text-white mb-2;
+    @apply text-[12px] font-bold text-white mb-2 uppercase tracking-wider;
   }
   
   .card-title-sm {
@@ -64,11 +67,12 @@
   }
 
   .card-body {
-    @apply text-base text-secondary;
+    @apply text-base text-secondary flex-grow; /* flex-grow to push button to bottom */
   }
 
+  /* MODIFIED: Card link styled as a button with 12px bold text */
   .card-link {
-    @apply text-accent font-semibold mt-4 inline-block hover:underline;
+    @apply inline-block text-center text-[12px] font-bold text-accent border border-accent rounded-md py-2 px-5 mt-4 transition-all duration-300 hover:bg-accent hover:text-white;
   }
   
   .form-input {
@@ -104,8 +108,6 @@
     opacity: 1;
     transform: translateY(0);
 }
-
-/* --- ADDED STYLES --- */
 
 /* Profile Picture Style */
 .profile-picture {
