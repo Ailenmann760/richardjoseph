@@ -3,68 +3,104 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Define custom styles in the 'base' layer */
+/* Define CSS Custom Properties (Variables) for the new design system */
+:root {
+  --color-primary: #110E1B; /* Dark background */
+  --color-panel: rgba(23, 19, 38, 0.6); /* Translucent panel background */
+  --color-accent: #FF7A59; /* Orange accent */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #908CAA; /* Light grey text */
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-input: #302C42; /* Dark input field background */
+}
+
 @layer base {
-    body {
-        @apply bg-[#050816] text-[#aaa6c3] font-['Inter'] leading-relaxed;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        @apply text-[#f3f3f3] font-['Space Grotesk'] font-bold;
-    }
-    section {
-        /* Add overflow-x-hidden to prevent horizontal scrollbars from animations */
-        @apply py-24 md:py-32 overflow-x-hidden;
-    }
-}
+  body {
+    background-color: var(--color-primary);
+    color: var(--color-text-secondary);
+    font-family: 'Inter', sans-serif;
+  }
 
-/* Animated Gradient Border for Cards */
-.animated-card {
-    @apply bg-[#100d25] p-5 rounded-2xl relative transition-all duration-300 ease-in-out;
-    border: 1px solid rgba(145, 94, 255, 0.2);
-}
-
-.animated-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(145, 94, 255, 0.1);
-    border-color: rgba(145, 94, 255, 0.5);
-}
-
-/* Accent Gradient Text */
-.accent-gradient {
-    background: linear-gradient(90deg, #915EFF, #C07CF8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-}
-
-/* Nav Link Style */
-.nav-link {
-    @apply relative text-[#aaa6c3] hover:text-white transition-colors duration-300 text-lg;
-}
-
-.nav-link::after {
+  /* Custom component styles */
+  .main-panel {
+    @apply bg-panel backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-black/20 my-12 overflow-hidden;
+  }
+  
+  .nav-link {
+    @apply relative text-secondary hover:text-white transition-colors duration-300 pb-2;
+  }
+  
+  .nav-link::after {
     content: '';
-    @apply absolute bottom-[-4px] left-0 w-0 h-[2px] bg-purple-500 transition-all duration-300;
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300;
+  }
+  
+  .nav-link:hover::after, .nav-link.active::after {
+    @apply w-full;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center text-white;
+  }
+  
+  .section-subtitle {
+    @apply max-w-2xl mx-auto text-center text-lg text-secondary mt-3;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white font-semibold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity duration-300 inline-block;
+  }
+
+  .ui-card {
+    @apply bg-primary/50 p-6 rounded-lg border border-white/10 transition-all duration-300 hover:border-accent hover:bg-white/5;
+  }
+
+  .card-title {
+    @apply text-xl font-bold text-white mb-2;
+  }
+  
+  .card-title-sm {
+      @apply text-lg font-semibold text-white mb-4;
+  }
+
+  .card-body {
+    @apply text-base text-secondary;
+  }
+
+  .card-link {
+    @apply text-accent font-semibold mt-4 inline-block hover:underline;
+  }
+  
+  .form-input {
+      @apply w-full bg-input text-white placeholder-secondary rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-accent;
+  }
+  
+  .social-link {
+    @apply w-10 h-10 flex items-center justify-center bg-input rounded-md text-secondary hover:text-white hover:bg-accent transition-all duration-300;
+  }
 }
 
-.nav-link:hover::after {
-    @apply w-full;
+/* Background Nebula/Gradient Effect */
+.background-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.3), transparent),
+                      radial-gradient(ellipse 80% 50% at 80% 40%, rgba(189, 118, 255, 0.2), transparent),
+                      radial-gradient(ellipse 80% 50% at 20% 90%, rgba(255, 122, 89, 0.15), transparent);
 }
+
 
 /* Fading Animation on Scroll */
 .fade-in {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
 .fade-in.is-visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Typing Cursor Style */
-.typed-cursor {
-    @apply text-purple-400 text-3xl md:text-5xl align-middle;
 }
