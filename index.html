@@ -5,226 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Richard Joseph | Web3 Architect & Educator</title>
-    <meta name="description" content="Richard Joseph is a professional Web3 Educator, Ethereum Solidity Developer, and Entrepreneur with over 6 years of experience in the blockchain industry. Founder of Lynx Web3 Academy and Co-founder of Web3 Africa.">
-    <meta name="keywords" content="Richard Joseph, Web3, Blockchain, Solidity, Ethereum, Developer, Educator, Entrepreneur, Web3 Africa, Lynx Web3 Academy, GaiaNet AI, Nigeria, Africa">
+    <meta name="description" content="Richard Joseph is a professional Web3 Educator, Ethereum Solidity Developer, and Entrepreneur with over 6 years of experience in the blockchain industry.">
+    <meta name="keywords" content="Richard Joseph, Web3, Blockchain, Solidity, Ethereum, Developer, Educator, Entrepreneur, Nigeria, Africa">
     <meta name="author" content="Richard Joseph">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://richardjoseph.com/">
-    <meta property="og:title" content="Richard Joseph | Web3 Architect & Educator">
-    <meta property="og:description" content="Building the future of the decentralized web in Africa and beyond.">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://richardjoseph.com/">
-    <meta property="twitter:title" content="Richard Joseph | Web3 Architect & Educator">
-    <meta property="twitter:description" content="Building the future of the decentralized web in Africa and beyond.">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>RJ</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>RJ</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
+<body class="bg-primary text-secondary font-sans">
 
-    <header class="bg-[#050816]/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-gray-900/50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-3xl font-bold text-white tracking-wider">RJ.</a>
-            <nav class="hidden md:flex space-x-10 items-center">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#writing" class="nav-link">Writing</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <button id="menu-btn" class="md:hidden z-50">
-                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-[#050816]">
-            <nav class="flex flex-col items-center justify-center h-full space-y-10 text-2xl">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#writing" class="nav-link">Writing</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <div class="background-gradient"></div>
 
-    <main>
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+        <div class="main-panel">
+            <header id="main-header" class="p-6 md:p-8 flex justify-between items-center border-b border-white/10 sticky top-0 bg-panel/80 backdrop-blur-lg z-30">
+                <a href="#home" class="text-2xl font-bold text-white tracking-wider flex items-center gap-3">
+                    <svg class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 7L12 12L22 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 22V12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M22 17L17 14.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17L7 14.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                    <span>Richard Joseph</span>
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#writing" class="nav-link">Writing</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                <button id="menu-btn" class="md:hidden z-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                    </svg>
+                </button>
+            </header>
 
-        <section id="home" class="min-h-screen flex items-center justify-center relative">
-             <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-            <div class="container mx-auto px-6 text-center z-10">
-                <div class="fade-in">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-                        Hi, I'm <span class="accent-gradient">Richard Joseph</span>
-                    </h1>
-                    <p class="text-xl md:text-3xl lg:text-4xl font-medium text-[#f3f3f3] mb-10 h-20 md:h-24">
-                        I'm a <span id="typing-effect"></span>
-                    </p>
-                    <div class="flex justify-center space-x-4">
-                        <a href="#projects" class="bg-purple-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-purple-700 transition-all duration-300 shadow-lg shadow-purple-500/20">View My Work</a>
-                        <a href="#contact" class="border-2 border-gray-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-800 hover:border-gray-700 transition-all duration-300">Get In Touch</a>
-                    </div>
-                </div>
+             <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-primary/95 backdrop-blur-lg z-40">
+                <nav class="flex flex-col items-center justify-center h-full space-y-10 text-2xl">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#writing" class="nav-link">Writing</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
             </div>
-        </section>
 
-        <section id="about">
-            <div class="container mx-auto px-6">
-                <div class="fade-in">
-                    <p class="text-center text-lg uppercase tracking-wider text-gray-400">Introduction</p>
-                    <h2 class="text-4xl md:text-5xl text-center mb-12">Overview.</h2>
-                </div>
-                <div class="max-w-4xl mx-auto space-y-6 text-lg text-gray-300 fade-in" data-delay="200">
-                    <p>With over six years deep in the blockchain and Web3 space, I've dedicated my career to not just building innovative technology but also to educating and empowering the next wave of talent in Africa.</p>
-                    <p>My journey began with a fascination for decentralization, leading me to master Ethereum and Solidity. I develop robust smart contracts and full-stack dApps, but I believe education is the true key to mass adoption.</p>
-                    <p>Driven by this mission, I co-founded <strong class="text-purple-400">Web3 Africa</strong> to create a pan-African ecosystem for builders, and founded <strong class="text-purple-400">Lynx Web3 Academy</strong> to provide high-quality education for aspiring developers.</p>
-                    <p>As an ambassador for <strong class="text-purple-400">GaiaNet AI</strong>, I am at the forefront of merging decentralized systems with artificial intelligence, advocating for a future where technology is both powerful and equitably distributed across the continent.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="tech-stack" class="bg-[#100d25]">
-            <div class="container mx-auto px-6">
-                 <div class="fade-in">
-                    <h2 class="text-4xl md:text-5xl text-center mb-12">My <span class="accent-gradient">Tech Stack</span></h2>
-                 </div>
-                 <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 text-center fade-in" data-delay="200">
-                    <div class="bg-[#050816] p-4 rounded-lg border border-gray-800">
-                        <p class="text-xl font-semibold text-white">Solidity</p>
+            <main class="p-6 md:p-8 lg:p-12">
+                <section id="home" class="min-h-[60vh] flex items-center text-center">
+                    <div class="w-full fade-in">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Architecting the Decentralized Future</h1>
+                        <p class="text-xl md:text-2xl text-secondary mb-8 h-16">
+                            I am a <span id="typing-effect" class="text-white font-semibold"></span>
+                        </p>
+                        <a href="#projects" class="btn-primary">View My Work</a>
                     </div>
-                    <div class="bg-[#050816] p-4 rounded-lg border border-gray-800">
-                        <p class="text-xl font-semibold text-white">JavaScript (ES6+)</p>
-                    </div>
-                     <div class="bg-[#050816] p-4 rounded-lg border border-gray-800">
-                        <p class="text-xl font-semibold text-white">React</p>
-                    </div>
-                     <div class="bg-[#050816] p-4 rounded-lg border border-gray-800">
-                        <p class="text-xl font-semibold text-white">Node.js</p>
-                    </div>
-                     <div class="bg-[#050816] p-4 rounded-lg border border-gray-800">
-                        <p class="text-xl font-semibold text-white">TailwindCSS</p>
-                    </div>
-                     <div class="bg-[#050816] p-4 rounded-lg border border-gray-800">
-                        <p class="text-xl font-semibold text-white">Ethers.js</p>
-                    </div>
-                 </div>
-            </div>
-        </section>
+                </section>
 
-        <section id="projects">
-            <div class="container mx-auto px-6">
-                <div class="fade-in">
-                    <p class="text-center text-lg uppercase tracking-wider text-gray-400">My Work</p>
-                    <h2 class="text-4xl md:text-5xl text-center mb-4">Projects & Initiatives.</h2>
-                    <p class="max-w-3xl mx-auto text-center text-lg text-gray-400 mb-12">A look into the ventures and technologies I'm building and supporting.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div class="animated-card fade-in">
-                        <h3 class="text-2xl font-bold mb-3 text-white">Lynx Web3 Academy</h3>
-                        <p class="text-gray-400 mb-4">As the founder, I'm building Africa's premier platform for Web3 education, offering courses in Solidity, dApp development, and NFT creation to onboard the next million developers.</p>
-                        <a href="#" class="font-semibold text-purple-400 hover:text-purple-300 transition-colors">Learn More &rarr;</a>
+                <section id="about" class="py-24">
+                    <div class="fade-in">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="section-subtitle">Pioneering Web3 innovation and education across Africa.</p>
                     </div>
-                    <div class="animated-card fade-in" data-delay="150">
-                        <h3 class="text-2xl font-bold mb-3 text-white">Web3 Africa Initiative</h3>
-                        <p class="text-gray-400 mb-4">Co-founded to foster a collaborative and innovative blockchain ecosystem across Africa through events, incubation, and community-building efforts.</p>
-                        <a href="#" class="font-semibold text-purple-400 hover:text-purple-300 transition-colors">Explore &rarr;</a>
+                    <div class="max-w-4xl mx-auto mt-12 text-lg leading-relaxed space-y-5 fade-in" data-delay="200">
+                        <p>With over six years immersed in the blockchain and Web3 space, my career is dedicated to building innovative technology and empowering Africa's next generation of tech talent. My journey is fueled by a fascination with decentralization's potential, leading me to master Ethereum and Solidity.</p>
+                        <p>I believe technology alone isn't enough; education is the catalyst for mass adoption. This conviction drove me to co-found <strong class="text-white">Web3 Africa</strong>, creating a pan-African ecosystem for builders, and to establish <strong class="text-white">Lynx Web3 Academy</strong> for high-quality developer education.</p>
+                        <p>As a <strong class="text-white">GaiaNet AI</strong> ambassador, I'm at the nexus of decentralized systems and artificial intelligence, advocating for a future where technology is powerful, equitable, and accessible to all.</p>
                     </div>
-                    <div class="animated-card fade-in" data-delay="300">
-                        <h3 class="text-2xl font-bold mb-3 text-white">GaiaNet AI Ambassador</h3>
-                        <p class="text-gray-400 mb-4">Representing a decentralized AI compute network, I advocate for community-owned AI infrastructure and help grow its ecosystem in the African market.</p>
-                        <a href="#" class="font-semibold text-purple-400 hover:text-purple-300 transition-colors">About GaiaNet &rarr;</a>
-                    </div>
-                    <div class="animated-card fade-in" data-delay="450">
-                        <h3 class="text-2xl font-bold mb-3 text-white">GitHub Repositories</h3>
-                        <p class="text-gray-400 mb-4">Explore my open-source work, including Solidity smart contracts, dApp frontends, and other blockchain-related projects.</p>
-                        <a href="https://github.com/Ailenmann760?tab=repositories" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-400 hover:text-purple-300 transition-colors">View on GitHub &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <section id="writing" class="bg-[#100d25]">
-            <div class="container mx-auto px-6">
-                <div class="fade-in">
-                    <p class="text-center text-lg uppercase tracking-wider text-gray-400">My Thoughts</p>
-                    <h2 class="text-4xl md:text-5xl text-center mb-12">Recent <span class="accent-gradient">Writing</span></h2>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="animated-card fade-in">
-                        <h3 class="text-xl font-bold mb-3">The Engine of Trust: A Deep Dive into Blockchain</h3>
-                        <p class="text-gray-400 mb-4">An exploration of the fundamental principles that make blockchain revolutionary for trust and transparency.</p>
-                        <a href="https://crypgo.medium.com/the-engine-of-trust-a-deep-dive-into-blockchain-technology-86e6b79e78a9" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-400 hover:text-purple-300 transition-colors">Read Article &rarr;</a>
+                <section id="projects" class="py-24">
+                    <div class="fade-in">
+                        <h2 class="section-title">Projects & Initiatives</h2>
+                        <p class="section-subtitle">A selection of ventures I am currently building and supporting.</p>
                     </div>
-                    <div class="animated-card fade-in" data-delay="150">
-                        <h3 class="text-xl font-bold mb-3">What determines the price of cryptocurrencies?</h3>
-                        <p class="text-gray-400 mb-4">A breakdown of the market dynamics, technical factors, and sentiment that influence crypto valuations.</p>
-                        <a href="https://lynxacademy.medium.com/what-determines-the-price-of-cryptocurrencies-21e59feee3f0" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-400 hover:text-purple-300 transition-colors">Read Article &rarr;</a>
-                    </div>
-                    <div class="animated-card fade-in" data-delay="300">
-                        <h3 class="text-xl font-bold mb-3">What is mining, and how do you mine crypto?</h3>
-                        <p class="text-gray-400 mb-4">A comprehensive guide to crypto mining, from Proof-of-Work to setting up a mining rig.</p>
-                        <a href="https://lynxacademy.medium.com/what-is-mining-and-how-do-you-mine-crypto-f1aba6a0cadc" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-400 hover:text-purple-300 transition-colors">Read Article &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <div class="container mx-auto px-6 text-center">
-                <div class="fade-in">
-                    <p class="text-center text-lg uppercase tracking-wider text-gray-400">Get In Touch</p>
-                    <h2 class="text-4xl md:text-5xl text-center mb-8">Contact Me.</h2>
-                </div>
-                
-                <div class="max-w-2xl mx-auto bg-[#100d25] p-8 rounded-2xl border border-gray-900 fade-in" data-delay="200">
-                    <form action="https://formspree.io/f/xgvzyowl" method="POST" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-left mb-2 font-medium text-gray-300">Your Name</label>
-                            <input type="text" name="name" id="name" required class="w-full bg-[#050816] border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div class="ui-card fade-in" data-delay="100">
+                            <h3 class="card-title">Lynx Web3 Academy</h3>
+                            <p class="card-body">Africa's premier platform for Web3 education, offering courses in Solidity, dApp development, and more to onboard the next million developers.</p>
                         </div>
-                        <div>
-                            <label for="email" class="block text-left mb-2 font-medium text-gray-300">Your Email</label>
-                            <input type="email" name="email" id="email" required class="w-full bg-[#050816] border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <div class="ui-card fade-in" data-delay="200">
+                            <h3 class="card-title">Web3 Africa Initiative</h3>
+                            <p class="card-body">Co-founded to foster a collaborative and innovative blockchain ecosystem across Africa through events, incubation, and community building.</p>
                         </div>
-                        <div>
-                            <label for="message" class="block text-left mb-2 font-medium text-gray-300">Your Message</label>
-                            <textarea name="message" id="message" rows="5" required class="w-full bg-[#050816] border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        <div class="ui-card fade-in" data-delay="300">
+                            <h3 class="card-title">GaiaNet AI Ambassador</h3>
+                            <p class="card-body">Representing a decentralized AI compute network, advocating for community-owned AI infrastructure and growing its ecosystem in Africa.</p>
                         </div>
-                        <button type="submit" class="w-full bg-purple-600 text-white font-bold py-3 px-12 rounded-lg hover:bg-purple-700 transition-all duration-300 shadow-lg shadow-purple-500/20">Send Message</button>
+                        <div class="ui-card fade-in" data-delay="400">
+                            <h3 class="card-title">GitHub Contributions</h3>
+                            <p class="card-body">Explore my open-source work, from Solidity smart contracts and dApp frontends to various other blockchain-related projects.</p>
+                            <a href="https://github.com/Ailenmann760?tab=repositories" target="_blank" rel="noopener noreferrer" class="card-link">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="writing" class="py-24">
+                    <div class="fade-in">
+                        <h2 class="section-title">Writing & Insights</h2>
+                        <p class="section-subtitle">Sharing knowledge on Web3, smart contracts, and the future of technology.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                         <div class="ui-card fade-in" data-delay="100">
+                            <h3 class="card-title-sm">The Engine of Trust: A Deep Dive into Blockchain</h3>
+                            <a href="https://crypgo.medium.com/the-engine-of-trust-a-deep-dive-into-blockchain-technology-86e6b79e78a9" target="_blank" rel="noopener noreferrer" class="card-link">Read Article &rarr;</a>
+                        </div>
+                        <div class="ui-card fade-in" data-delay="200">
+                            <h3 class="card-title-sm">What determines the price of cryptocurrencies?</h3>
+                            <a href="https://lynxacademy.medium.com/what-determines-the-price-of-cryptocurrencies-21e59feee3f0" target="_blank" rel="noopener noreferrer" class="card-link">Read Article &rarr;</a>
+                        </div>
+                        <div class="ui-card fade-in" data-delay="300">
+                            <h3 class="card-title-sm">Real World Assets (RWA) and Blockchain</h3>
+                            <a href="https://dekript.medium.com/real-world-assets-rwa-and-blockchain-opening-up-new-opportunities-5323fcdeb121" target="_blank" rel="noopener noreferrer" class="card-link">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="py-24">
+                     <div class="fade-in">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-subtitle">I'm open to discussing new projects, partnerships, or speaking opportunities.</p>
+                    </div>
+                    <form action="https://formspree.io/f/xgvzyowl" method="POST" class="max-w-2xl mx-auto mt-12 space-y-6 fade-in" data-delay="200">
+                        <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                        <input type="email" name="email" placeholder="Your Email" required class="form-input">
+                        <textarea name="message" placeholder="Your Message" rows="5" required class="form-input"></textarea>
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
                     </form>
+                </section>
+            </main>
+
+            <footer class="p-6 md:p-8 border-t border-white/10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="text-center md:text-left">
+                        <a href="#home" class="text-xl font-bold text-white flex items-center gap-3 mb-2 justify-center md:justify-start">
+                             <svg class="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 7L12 12L22 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 22V12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M22 17L17 14.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17L7 14.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                            <span>Richard Joseph</span>
+                        </a>
+                        <p class="max-w-xs text-sm">
+                            Building the future of the decentralized web in Africa and beyond.
+                            &copy; 2025.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="social-link" aria-label="X/Twitter">
+                           <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16"><path d="M9.29.155A1.85 1.85 0 0 1 11.13.02a1.84 1.84 0 0 1 1.6 1.157 5.72 5.72 0 0 0 1.94-.748 1.84 1.84 0 0 1-1.35 1.793 5.8 5.8 0 0 0 1.76-.475 6.07 6.07 0 0 1-1.53 1.623.14.14 0 0 0-.06.11v.538A8.25 8.25 0 0 1 2.36 9.87a5.9 5.9 0 0 1-.5-2.663 1.84 1.84 0 0 1 .97-1.63 1.84 1.84 0 0 0- .8-1.78 1.8 1.8 0 0 1 .53-2.31c.42-.32 1.03-.4 1.54-.22a5.78 5.78 0 0 0 4.24-2.138Z"/></svg>
+                        </a>
+                         <a href="https://github.com/Ailenmann760" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                        </a>
+                    </div>
                 </div>
-
-            </div>
-        </section>
-
-    </main>
-    
-    <footer class="border-t border-gray-900">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors" aria-label="Twitter">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
-                </a>
-                <a href="https://github.com/Ailenmann760" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-purple-400 transition-colors" aria-label="GitHub">
-                   <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.286 2.553 7.94 6.205 9.488.45.082.615-.195.615-.434 0-.215-.008-.975-.012-1.72-2.48.538-3.003-1.07-3.003-1.07-.41-1.04-1-1.317-1-1.317-.818-.56.062-.548.062-.548.905.063 1.383.93 1.383.93.803 1.378 2.11.98 2.625.75.082-.583.313-1.033.57-1.27-1.998-.228-4.1-1-4.1-4.448 0-.98.35-1.783.923-2.41-.093-.23-.398-1.14.088-2.375 0 0 .753-.24 2.468.922.715-.198 1.48-.297 2.24-.3.76.003 1.525.102 2.24.3 1.714-1.162 2.465-.922 2.465-.922.487 1.235.182 2.145.09 2.375.575.627.922 1.43.922 2.41 0 3.46-2.105 4.218-4.108 4.44.322.278.61.825.61 1.662 0 1.2-.01 2.168-.01 2.46 0 .24.163.52.618.432C19.447 19.94 22 16.285 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors" aria-label="LinkedIn">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.206v4.248H8.014V8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.71zM4.938 7.414a1.248 1.248 0 11-2.496 0 1.248 1.248 0 012.496 0zM6.187 8.59H3.692v7.748h2.495V8.59zM18 2H6a4 4 0 00-4 4v12a4 4 0 004 4h12a4 4 0 004-4V6a4 4 0 00-4-4z" clip-rule="evenodd" /></svg>
-                </a>
-            </div>
-            <p>&copy; 2025 Richard Joseph. All Rights Reserved.</p>
+            </footer>
         </div>
-    </footer>
+    </div>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="script.js"></script>
 </body>
 </html>
