@@ -1,188 +1,730 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard Joseph | Web3 Architect & Educator</title>
-    <meta name="description" content="Richard Joseph is a professional Web3 Educator, Ethereum Solidity Developer, and Entrepreneur with over 6 years of experience in the blockchain industry.">
-    <meta name="keywords" content="Richard Joseph, Web3, Blockchain, Solidity, Ethereum, Developer, Educator, Entrepreneur, Nigeria, Africa">
-    <meta name="author" content="Richard Joseph">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>RJ</text></svg>">
-    
+    <meta name="description"
+        content="Richard Joseph is a professional Web3 Educator, Ethereum Solidity Developer, and Entrepreneur with over 6 years of experience in the blockchain industry.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --color-primary: #110E1B;
-            --color-panel: rgba(23, 19, 38, 0.6);
-            --color-accent: #FF7A59;
-            --color-text-primary: #FFFFFF;
-            --color-text-secondary: #908CAA;
-            --color-border: rgba(255, 255, 255, 0.1);
-            --color-input: #302C42;
+            /* Deep Slate & Gold Theme */
+            --primary-bg: #020617;
+            /* Slate 950 */
+            --secondary-bg: #0f172a;
+            /* Slate 900 */
+            --card-bg: rgba(30, 41, 59, 0.6);
+            /* Slate 800 with opacity */
+            --accent: #D4AF37;
+            /* Gold */
+            --accent-light: #F4C430;
+            /* Lighter Gold */
+            --text-primary: #f8fafc;
+            /* Slate 50 */
+            --text-secondary: #94a3b8;
+            /* Slate 400 */
+            --border: rgba(212, 175, 55, 0.15);
+            /* Subtle Gold Border */
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--color-primary);
-            color: var(--color-text-secondary);
+            background: var(--primary-bg);
+            color: var(--text-secondary);
+            overflow-x: hidden;
         }
-        .background-gradient {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
-            background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.3), transparent),
-                              radial-gradient(ellipse 80% 50% at 80% 40%, rgba(189, 118, 255, 0.2), transparent),
-                              radial-gradient(ellipse 80% 50% at 20% 90%, rgba(255, 122, 89, 0.15), transparent);
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
         }
-        .nav-link.active::after { width: 100%; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-        .fade-in.is-visible { opacity: 1; transform: translateY(0); }
-        .inline-highlight { font-weight: 600; font-size: 1.05em; color: var(--color-text-primary); }
+
+        /* Sophisticated Background */
+        .bg-mesh {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.05), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(30, 58, 138, 0.08), transparent 25%);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Gold Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #F4C430, #D4AF37, #C5A028);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Professional Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, #D4AF37, #B4941F);
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #0f172a;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            padding: 11px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #D4AF37;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: #D4AF37;
+            color: #F4C430;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            border-left: 2px solid rgba(212, 175, 55, 0.2);
+            padding-left: 2rem;
+            padding-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: #0f172a;
+            border: 2px solid #D4AF37;
+            border-radius: 50%;
+        }
+
+        /* Skill Tags */
+        .skill-tag {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: rgba(212, 175, 55, 0.4);
+            color: #D4AF37;
+        }
+
+        /* Stats Counter */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #D4AF37;
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navbar */
+        .nav-link {
+            position: relative;
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: #94a3b8;
+        }
+
+        .nav-link:hover {
+            color: #D4AF37;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Section Headers */
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #D4AF37;
+        }
     </style>
 </head>
+
 <body class="antialiased">
+    <div class="bg-mesh"></div>
 
-    <div class="background-gradient"></div>
-
-    <div class="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-        <div class="my-12 overflow-hidden rounded-2xl border border-white/10 bg-[--color-panel] shadow-2xl shadow-black/20 backdrop-blur-2xl">
-            <header id="main-header" class="sticky top-0 z-30 flex items-center justify-between border-b border-white/10 bg-[--color-panel]/80 p-6 backdrop-blur-lg md:p-8">
-                <a href="#home" class="flex items-center gap-3 text-2xl font-bold tracking-wider text-white">
-                    <svg class="h-6 w-6 text-[--color-accent]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 7L12 12L22 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 22V12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M22 17L17 14.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17L7 14.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                    <span>Richard Joseph</span>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-6">
+        <!-- Header -->
+        <header class="glass-card px-6 py-4 mb-12 sticky top-4 z-50 bg-[#0f172a]/80 backdrop-blur-md">
+            <div class="flex items-center justify-between">
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 rounded bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 flex items-center justify-center group-hover:border-[#D4AF37]/50 transition duration-300">
+                        <span class="text-[#D4AF37] font-bold text-lg font-serif">RJ</span>
+                    </div>
+                    <span
+                        class="text-lg font-bold text-slate-200 hidden sm:block tracking-tight group-hover:text-white transition">Richard
+                        Joseph</span>
                 </a>
-                <nav class="hidden items-center space-x-8 md:flex">
-                    <a href="#about" class="nav-link relative pb-2 text-[--color-text-secondary] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[--color-accent] after:transition-all after:duration-300 hover:text-white">About</a>
-                    <a href="#projects" class="nav-link relative pb-2 text-[--color-text-secondary] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[--color-accent] after:transition-all after:duration-300 hover:text-white">Projects</a>
-                    <a href="#writing" class="nav-link relative pb-2 text-[--color-text-secondary] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[--color-accent] after:transition-all after:duration-300 hover:text-white">Writing</a>
-                    <a href="#contact" class="nav-link relative pb-2 text-[--color-text-secondary] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[--color-accent] after:transition-all after:duration-300 hover:text-white">Contact</a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="nav-link transition">About</a>
+                    <a href="#experience" class="nav-link transition">Experience</a>
+                    <a href="#projects" class="nav-link transition">Projects</a>
+                    <a href="#writing" class="nav-link transition">Insights</a>
+                    <a href="#contact" class="btn-primary text-sm"><span>Contact Me</span></a>
                 </nav>
-                <button id="menu-btn" class="z-50 md:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" /></svg>
+                <button id="menu-btn" class="md:hidden text-slate-300 hover:text-[#D4AF37] transition p-2">
+                    <i class="fas fa-bars text-xl"></i>
                 </button>
-            </header>
-
-            <div id="mobile-menu" class="fixed inset-0 z-40 hidden bg-[--color-primary]/95 backdrop-blur-lg md:hidden">
-                <nav class="flex h-full flex-col items-center justify-center space-y-10 text-2xl">
-                    <a href="#about" class="nav-link relative pb-2 text-[--color-text-secondary] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[--color-accent] after:transition-all after:duration-300 hover:text-white">About</a>
-                    <a href="#projects" class="nav-link relative pb-2 text-[--color-text-secondary] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[--color-accent] after:transition-all after:duration-300 hover:text-white">Projects</a>
-                    <a href="#writing" class="nav-link relative pb-2 text-[--color-text-secondary] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[--color-accent] after:transition-all after:duration-300 hover:text-white">Writing</a>
-                    <a href="#contact" class="nav-link relative pb-2 text-[--color-text-secondary] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[--color-accent] after:transition-all after:duration-300 hover:text-white">Contact</a>
-                </nav>
             </div>
+        </header>
 
-            <main class="p-6 md:p-8 lg:p-12">
-                <section id="home" class="flex min-h-[60vh] items-center text-center">
-                    <div class="fade-in flex w-full flex-col items-center">
-                        <img src="Portfolio-logo.png" alt="Richard Joseph profile picture" class="mb-8 h-40 w-40 rounded-full border-4 border-[--color-border] object-cover shadow-lg shadow-black/20">
-                        <h1 class="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">Architecting the Decentralized Future</h1>
-                        <p class="mb-8 h-16 text-xl text-[--color-text-secondary] md:text-2xl">I am a <span id="typing-effect" class="font-semibold text-white"></span></p>
-                        <a href="#projects" class="inline-block rounded-lg bg-[--color-accent] px-8 py-3 text-[14px] font-bold text-white transition-opacity duration-300 hover:opacity-90">View my work</a>
-                    </div>
-                </section>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 z-40 hidden bg-[#020617]/98 backdrop-blur-xl md:hidden">
+            <nav class="flex flex-col items-center justify-center h-full gap-8 text-xl">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#writing" class="nav-link">Insights</a>
+                <a href="#contact" class="btn-primary mt-4"><span>Contact Me</span></a>
+            </nav>
+        </div>
 
-                <section id="about" class="py-24">
-                    <div class="fade-in">
-                        <h2 class="text-center text-[14px] font-bold uppercase tracking-widest text-white">About me</h2>
-                        <p class="mx-auto mt-3 max-w-2xl text-center text-lg text-[--color-text-secondary]">Pioneering Web3 innovation and education across Africa.</p>
-                    </div>
-                    <div class="fade-in mx-auto mt-12 max-w-4xl space-y-5 text-lg leading-relaxed" data-delay="200">
-                        <p>With over six years immersed in the blockchain and Web3 space, my career is dedicated to building innovative technology and empowering Africa's next generation of tech talent. My journey is fueled by a fascination with decentralization's potential, leading me to master Ethereum and Solidity.</p>
-                        <p>I believe technology alone isn't enough; education is the catalyst for mass adoption. This conviction drove me to co-found <strong class="inline-highlight">Web3 Africa</strong>, creating a pan-African ecosystem for builders, and to establish <strong class="inline-highlight">Lynx Web3 Academy</strong> for high-quality developer education.</p>
-                        <p>As a <strong class="inline-highlight">GaiaNet AI</strong> ambassador, I'm at the nexus of decentralized systems and artificial intelligence, advocating for a future where technology is powerful, equitable, and accessible to all.</p>
-                    </div>
-                </section>
-
-                <section id="projects" class="py-24">
-                    <div class="fade-in">
-                        <h2 class="text-center text-[14px] font-bold uppercase tracking-widest text-white">Projects and initiatives</h2>
-                        <p class="mx-auto mt-3 max-w-2xl text-center text-lg text-[--color-text-secondary]">A selection of ventures I am currently building and supporting.</p>
-                    </div>
-                    <div class="mt-12 grid gap-8 md:grid-cols-2">
-                        <div class="fade-in flex flex-col rounded-lg border border-white/10 bg-black/20 p-6 transition-all duration-300 hover:border-[--color-accent] hover:bg-white/5" data-delay="100">
-                            <h3 class="mb-3 text-[12px] font-bold uppercase tracking-wider text-white">Lynx web3 academy</h3>
-                            <p class="mb-4 flex-grow text-base text-[--color-text-secondary]">Africa's premier platform for Web3 education, offering courses in Solidity, dApp development, and more to onboard the next million developers.</p>
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="min-h-[80vh] flex items-center py-16">
+                <div class="grid lg:grid-cols-2 gap-16 items-center w-full">
+                    <div class="fade-up">
+                        <div class="section-badge mb-6">
+                            <span class="w-1.5 h-1.5 bg-[#D4AF37] rounded-full animate-pulse"></span>
+                            Web3 Architect & Educator
                         </div>
-                        <div class="fade-in flex flex-col rounded-lg border border-white/10 bg-black/20 p-6 transition-all duration-300 hover:border-[--color-accent] hover:bg-white/5" data-delay="200">
-                            <h3 class="mb-3 text-[12px] font-bold uppercase tracking-wider text-white">Web3 Africa Initiative</h3>
-                            <p class="mb-4 flex-grow text-base text-[--color-text-secondary]">Co-founded to foster a collaborative and innovative blockchain ecosystem across Africa through events, incubation, and community building.</p>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                            Building the <span class="gradient-text">Decentralized</span> Infrastructure of Tomorrow
+                        </h1>
+                        <p class="text-xl text-slate-400 mb-4 font-light">I am a <span id="typing-effect"
+                                class="text-slate-200 font-medium"></span></p>
+                        <p class="text-lg text-slate-400 mb-10 leading-relaxed max-w-lg">
+                            Leveraging 6+ years of blockchain expertise to architect scalable solutions and cultivate
+                            the next generation of African tech talent.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects" class="btn-primary"><span>View Portfolio</span></a>
+                            <a href="#contact" class="btn-outline">Get In Touch</a>
                         </div>
-                        <div class="fade-in flex flex-col rounded-lg border border-white/10 bg-black/20 p-6 transition-all duration-300 hover:border-[--color-accent] hover:bg-white/5" data-delay="300">
-                            <h3 class="mb-3 text-[12px] font-bold uppercase tracking-wider text-white">GaiaNet AI Ambassador</h3>
-                            <p class="mb-4 flex-grow text-base text-[--color-text-secondary]">Representing a decentralized AI compute network, advocating for community-owned AI infrastructure and growing its ecosystem in Africa.</p>
-                        </div>
-                        <div class="fade-in flex flex-col rounded-lg border border-white/10 bg-black/20 p-6 transition-all duration-300 hover:border-[--color-accent] hover:bg-white/5" data-delay="400">
-                            <h3 class="mb-3 text-[12px] font-bold uppercase tracking-wider text-white">Github contributions</h3>
-                            <p class="mb-4 flex-grow text-base text-[--color-text-secondary]">Explore my open-source work, from Solidity smart contracts and dApp frontends to various other blockchain-related projects.</p>
-                            <a href="https://github.com/Ailenmann760?tab=repositories" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block rounded-md border border-[--color-accent] px-5 py-2 text-center text-[12px] font-bold text-[--color-accent] transition-all duration-300 hover:bg-[--color-accent] hover:text-white">View on Github</a>
-                        </div>
-                        <div class="fade-in flex flex-col rounded-lg border border-white/10 bg-black/20 p-6 transition-all duration-300 hover:border-[--color-accent] hover:bg-white/5" data-delay="500">
-                            <h3 class="mb-3 text-[12px] font-bold uppercase tracking-wider text-white">My Professional CV</h3>
-                            <p class="mb-4 flex-grow text-base text-[--color-text-secondary]">A detailed overview of my professional experience, skills, and accomplishments in the Web3 space.</p>
-                            <a href="https://docs.google.com/document/d/1cttSDCsm6AUXkRfKbhCErYSJ0B9Azj30L4k9gRsz6U4/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block rounded-md border border-[--color-accent] px-5 py-2 text-center text-[12px] font-bold text-[--color-accent] transition-all duration-300 hover:bg-[--color-accent] hover:text-white">View CV</a>
+                        <div class="flex items-center gap-6 mt-12 border-t border-slate-800 pt-8">
+                            <a href="https://x.com/dekript760" target="_blank"
+                                class="text-slate-500 hover:text-[#D4AF37] transition text-xl"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/Ailenmann760" target="_blank"
+                                class="text-slate-500 hover:text-[#D4AF37] transition text-xl"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/richard-joseph-86a82a384" target="_blank"
+                                class="text-slate-500 hover:text-[#D4AF37] transition text-xl"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:richard@example.com"
+                                class="text-slate-500 hover:text-[#D4AF37] transition text-xl"><i
+                                    class="fas fa-envelope"></i></a>
                         </div>
                     </div>
-                </section>
-
-                <section id="writing" class="py-24">
-                    <div class="fade-in">
-                        <h2 class="text-center text-[14px] font-bold uppercase tracking-widest text-white">Writing & insights</h2>
-                        <p class="mx-auto mt-3 max-w-2xl text-center text-lg text-[--color-text-secondary]">Sharing knowledge on Web3, smart contracts, and the future of technology.</p>
-                    </div>
-                    <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                         <div class="fade-in flex flex-col rounded-lg border border-white/10 bg-black/20 p-6 transition-all duration-300 hover:border-[--color-accent] hover:bg-white/5" data-delay="100">
-                            <h3 class="mb-3 flex-grow text-[12px] font-bold uppercase tracking-wider text-white">The Engine of Trust: A Deep Dive into Blockchain</h3>
-                            <a href="https://crypgo.medium.com/the-engine-of-trust-a-deep-dive-into-blockchain-technology-86e6b79e78a9" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block rounded-md border border-[--color-accent] px-5 py-2 text-center text-[12px] font-bold text-[--color-accent] transition-all duration-300 hover:bg-[--color-accent] hover:text-white">Read article</a>
+                    <div class="fade-up relative hidden lg:block" data-delay="200">
+                        <div class="relative group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-[#D4AF37]/20 to-slate-800/50 rounded-2xl blur-2xl group-hover:blur-3xl transition duration-700">
+                            </div>
+                            <img src="Portfolio-logo.png" alt="Richard Joseph"
+                                class="relative w-80 h-80 object-cover rounded-2xl border border-slate-700 shadow-2xl mx-auto grayscale hover:grayscale-0 transition duration-500">
                         </div>
-                        <div class="fade-in flex flex-col rounded-lg border border-white/10 bg-black/20 p-6 transition-all duration-300 hover:border-[--color-accent] hover:bg-white/5" data-delay="200">
-                            <h3 class="mb-3 flex-grow text-[12px] font-bold uppercase tracking-wider text-white">What determines the price of cryptocurrencies?</h3>
-                            <a href="https://lynxacademy.medium.com/what-determines-the-price-of-cryptocurrencies-21e59feee3f0" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block rounded-md border border-[--color-accent] px-5 py-2 text-center text-[12px] font-bold text-[--color-accent] transition-all duration-300 hover:bg-[--color-accent] hover:text-white">Read article</a>
-                        </div>
-                        <div class="fade-in flex flex-col rounded-lg border border-white/10 bg-black/20 p-6 transition-all duration-300 hover:border-[--color-accent] hover:bg-white/5" data-delay="300">
-                            <h3 class="mb-3 flex-grow text-[12px] font-bold uppercase tracking-wider text-white">Real World Assets (RWA) and Blockchain</h3>
-                            <a href="https://dekript.medium.com/real-world-assets-rwa-and-blockchain-opening-up-new-opportunities-5323fcdeb121" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block rounded-md border border-[--color-accent] px-5 py-2 text-center text-[12px] font-bold text-[--color-accent] transition-all duration-300 hover:bg-[--color-accent] hover:text-white">Read article</a>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="contact" class="py-24">
-                     <div class="fade-in">
-                        <h2 class="text-center text-[14px] font-bold uppercase tracking-widest text-white">Get in touch</h2>
-                        <p class="mx-auto mt-3 max-w-2xl text-center text-lg text-[--color-text-secondary]">I'm open to discussing new projects, partnerships, or speaking opportunities.</p>
-                    </div>
-                    <form action="https://formspree.io/f/xgvzyowl" method="POST" class="fade-in mx-auto mt-12 max-w-2xl space-y-6" data-delay="200">
-                        <input type="text" name="name" placeholder="Your Name" required class="w-full rounded-lg border-none bg-[--color-input] px-4 py-3 text-white placeholder-[--color-text-secondary] focus:outline-none focus:ring-2 focus:ring-[--color-accent]">
-                        <input type="email" name="email" placeholder="Your Email" required class="w-full rounded-lg border-none bg-[--color-input] px-4 py-3 text-white placeholder-[--color-text-secondary] focus:outline-none focus:ring-2 focus:ring-[--color-accent]">
-                        <textarea name="message" placeholder="Your Message" rows="5" required class="w-full rounded-lg border-none bg-[--color-input] px-4 py-3 text-white placeholder-[--color-text-secondary] focus:outline-none focus:ring-2 focus:ring-[--color-accent]"></textarea>
-                        <button type="submit" class="w-full rounded-lg bg-[--color-accent] px-8 py-3 text-[14px] font-bold text-white transition-opacity duration-300 hover:opacity-90">Send Message</button>
-                    </form>
-                </section>
-            </main>
-
-            <footer class="border-t border-white/10 p-6 md:p-8">
-                <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
-                    <div class="text-center md:text-left">
-                        <a href="#home" class="mb-2 flex items-center justify-center gap-3 text-xl font-bold text-white md:justify-start">
-                             <svg class="h-5 w-5 text-[--color-accent]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 7L12 12L22 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 22V12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M22 17L17 14.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17L7 14.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                            <span>Richard Joseph</span>
-                        </a>
-                        <p class="max-w-xs text-sm">Building the future of the decentralized web in Africa and beyond. &copy; 2025.</p>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <a href="https://x.com/dekript760" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-md bg-[--color-input] text-[--color-text-secondary] transition-all duration-300 hover:bg-[--color-accent] hover:text-white" aria-label="X/Twitter">
-                           <svg fill="currentColor" class="h-5 w-5" viewBox="0 0 16 16"><path d="M9.29.155A1.85 1.85 0 0 1 11.13.02a1.84 1.84 0 0 1 1.6 1.157 5.72 5.72 0 0 0 1.94-.748 1.84 1.84 0 0 1-1.35 1.793 5.8 5.8 0 0 0 1.76-.475 6.07 6.07 0 0 1-1.53 1.623.14.14 0 0 0-.06.11v.538A8.25 8.25 0 0 1 2.36 9.87a5.9 5.9 0 0 1-.5-2.663 1.84 1.84 0 0 1 .97-1.63 1.84 1.84 0 0 0-.8-1.78 1.8 1.8 0 0 1 .53-2.31c.42-.32 1.03-.4 1.54-.22a5.78 5.78 0 0 0 4.24-2.138Z"/></svg>
-                        </a>
-                         <a href="https://github.com/Ailenmann760" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center rounded-md bg-[--color-input] text-[--color-text-secondary] transition-all duration-300 hover:bg-[--color-accent] hover:text-white" aria-label="GitHub">
-                            <svg fill="currentColor" class="h-5 w-5" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-                        </a>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="py-12 border-y border-slate-800/50 bg-slate-900/30">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center fade-up">
+                        <div class="stat-number">6+</div>
+                        <p class="text-slate-500 text-sm uppercase tracking-wider mt-2">Years Experience</p>
+                    </div>
+                    <div class="text-center fade-up" data-delay="100">
+                        <div class="stat-number">50+</div>
+                        <p class="text-slate-500 text-sm uppercase tracking-wider mt-2">Projects Delivered</p>
+                    </div>
+                    <div class="text-center fade-up" data-delay="200">
+                        <div class="stat-number">1k+</div>
+                        <p class="text-slate-500 text-sm uppercase tracking-wider mt-2">Developers Trained</p>
+                    </div>
+                    <div class="text-center fade-up" data-delay="300">
+                        <div class="stat-number">10+</div>
+                        <p class="text-slate-500 text-sm uppercase tracking-wider mt-2">Global Partners</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-24">
+                <div class="text-center mb-16 fade-up">
+                    <span class="section-badge">About Me</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-6">Pioneering Web3 Innovation</h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="fade-up" data-delay="100">
+                        <div class="glass-card p-8 space-y-6">
+                            <p class="text-lg leading-relaxed text-slate-300">
+                                With over six years immersed in the blockchain and Web3 space, my career is dedicated to
+                                <span class="text-[#D4AF37] font-medium">building robust decentralized systems</span>
+                                and empowering Africa's next generation of tech talent.
+                            </p>
+                            <p class="text-lg leading-relaxed text-slate-300">
+                                I believe technology alone isn't enough; education is the catalyst for mass adoption.
+                                This conviction drove me to co-found <span class="text-white font-medium">Web3
+                                    Africa</span>, creating a pan-African ecosystem for builders.
+                            </p>
+                            <p class="text-lg leading-relaxed text-slate-300">
+                                As a strategic partner with <span class="text-white font-medium">GaiaNet AI</span>, I
+                                operate at the intersection of decentralized systems and artificial intelligence,
+                                advocating for infrastructure that is powerful, equitable, and accessible.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fade-up" data-delay="200">
+                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                            <i class="fas fa-code text-[#D4AF37]"></i> Technical Expertise
+                        </h3>
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <span class="skill-tag">Solidity</span>
+                            <span class="skill-tag">Ethereum</span>
+                            <span class="skill-tag">Smart Contract Architecture</span>
+                            <span class="skill-tag">DeFi Protocols</span>
+                            <span class="skill-tag">Web3.js / Ethers.js</span>
+                            <span class="skill-tag">Hardhat / Foundry</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">IPFS</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                            <i class="fas fa-layer-group text-[#D4AF37]"></i> Core Competencies
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Blockchain Education</span>
+                            <span class="skill-tag">Community Growth</span>
+                            <span class="skill-tag">Technical Writing</span>
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Strategic Partnerships</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="py-24 bg-slate-900/20">
+                <div class="text-center mb-16 fade-up">
+                    <span class="section-badge">Experience</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-6">Professional Journey</h2>
+                </div>
+                <div class="max-w-3xl mx-auto px-4">
+                    <div class="space-y-2">
+                        <!-- Item 1 -->
+                        <div class="timeline-item fade-up">
+                            <div class="glass-card p-6 hover:border-[#D4AF37]/30 transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                                    <h3 class="text-xl font-bold text-white">Founder & Lead Educator</h3>
+                                    <span
+                                        class="text-[#D4AF37] text-sm font-semibold bg-[#D4AF37]/10 px-3 py-1 rounded-full">2022
+                                        - Present</span>
+                                </div>
+                                <p class="text-slate-300 font-medium mb-3">Lynx Web3 Academy</p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Leading Africa's premier Web3 education platform. Developed comprehensive curriculum
+                                    covering Solidity, dApp development, and blockchain fundamentals. Successfully
+                                    trained 1000+ developers across 10+ African countries, bridging the skills gap in
+                                    the region.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="timeline-item fade-up" data-delay="100">
+                            <div class="glass-card p-6 hover:border-[#D4AF37]/30 transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                                    <h3 class="text-xl font-bold text-white">Co-Founder</h3>
+                                    <span class="text-slate-500 text-sm font-medium">2021 - Present</span>
+                                </div>
+                                <p class="text-slate-300 font-medium mb-3">Web3 Africa Initiative</p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Spearheading a collaborative blockchain ecosystem across Africa. Organizing
+                                    hackathons, incubation programs, and community events. Established strategic
+                                    partnerships with major protocols to bring opportunities to African developers.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="timeline-item fade-up" data-delay="200">
+                            <div class="glass-card p-6 hover:border-[#D4AF37]/30 transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                                    <h3 class="text-xl font-bold text-white">Strategic Partner & Contributor</h3>
+                                    <span class="text-slate-500 text-sm font-medium">2023 - Present</span>
+                                </div>
+                                <p class="text-slate-300 font-medium mb-3">GaiaNet AI</p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Collaborating with the decentralized AI compute network to expand its footprint in
+                                    Africa. Advocating for community-owned AI infrastructure and fostering ecosystem
+                                    growth through education and technical workshops.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="timeline-item fade-up" data-delay="300">
+                            <div class="glass-card p-6 hover:border-[#D4AF37]/30 transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                                    <h3 class="text-xl font-bold text-white">Blockchain Developer</h3>
+                                    <span class="text-slate-500 text-sm font-medium">2018 - 2021</span>
+                                </div>
+                                <p class="text-slate-300 font-medium mb-3">Freelance & Various Projects</p>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Architected and deployed smart contracts for DeFi protocols, NFT platforms, and
+                                    DAOs. Built responsive dApp frontends using React and Web3.js. Contributed to
+                                    multiple open-source blockchain repositories.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-24">
+                <div class="text-center mb-16 fade-up">
+                    <span class="section-badge">Portfolio</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-6">Featured Initiatives</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="glass-card p-8 fade-up group hover:bg-slate-800/80 transition">
+                        <div
+                            class="w-12 h-12 rounded bg-slate-700/50 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition">
+                            <i class="fas fa-graduation-cap text-[#D4AF37] text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3">Lynx Web3 Academy</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Africa's premier platform for Web3
+                            education, offering courses in Solidity, dApp development, and blockchain fundamentals.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded border border-slate-600">EdTech</span>
+                            <span
+                                class="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded border border-slate-600">Web3</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card p-8 fade-up group hover:bg-slate-800/80 transition" data-delay="100">
+                        <div
+                            class="w-12 h-12 rounded bg-slate-700/50 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition">
+                            <i class="fas fa-globe-africa text-[#D4AF37] text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3">Web3 Africa Initiative</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Pan-African blockchain ecosystem
+                            fostering innovation through events, incubation, hackathons, and community building.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded border border-slate-600">Community</span>
+                            <span
+                                class="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded border border-slate-600">Ecosystem</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-card p-8 fade-up group hover:bg-slate-800/80 transition" data-delay="200">
+                        <div
+                            class="w-12 h-12 rounded bg-slate-700/50 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition">
+                            <i class="fas fa-network-wired text-[#D4AF37] text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3">GaiaNet AI</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Strategic partner for decentralized AI
+                            compute network, advocating for community-owned AI infrastructure across Africa.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span
+                                class="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded border border-slate-600">AI</span>
+                            <span
+                                class="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded border border-slate-600">Decentralized</span>
+                        </div>
+                    </div>
+
+                    <!-- CV Card -->
+                    <div class="glass-card p-8 fade-up group hover:bg-slate-800/80 transition" data-delay="300">
+                        <div
+                            class="w-12 h-12 rounded bg-slate-700/50 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition">
+                            <i class="fas fa-file-alt text-[#D4AF37] text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3">Professional CV</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Detailed overview of my professional
+                            experience, skills, and accomplishments in the Web3 space.</p>
+                        <a href="https://docs.google.com/document/d/1cttSDCsm6AUXkRfKbhCErYSJ0B9Azj30L4k9gRsz6U4/edit?usp=drivesdk"
+                            target="_blank" class="btn-outline text-sm inline-block">View CV</a>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 fade-up">
+                    <a href="https://github.com/Ailenmann760?tab=repositories" target="_blank"
+                        class="btn-outline inline-flex items-center gap-2">
+                        <i class="fab fa-github"></i> View Code on GitHub
+                    </a>
+                </div>
+            </section>
+
+            <!-- Testimonials Section (New) -->
+            <section class="py-24 bg-slate-900/30">
+                <div class="text-center mb-16 fade-up">
+                    <span class="section-badge">Testimonials</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-6">What People Say</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="glass-card p-8 fade-up">
+                        <div class="flex text-[#D4AF37] mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 italic mb-6">"Richard is a visionary leader in the Web3 space. His
+                            ability to break down complex blockchain concepts into digestible educational content is
+                            unmatched."</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-slate-400">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold text-sm">Sarah M.</p>
+                                <p class="text-slate-500 text-xs">Blockchain Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 fade-up" data-delay="100">
+                        <div class="flex text-[#D4AF37] mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 italic mb-6">"Working with Richard on the Web3 Africa Initiative was
+                            transformative. His dedication to community growth and technical excellence is inspiring."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-slate-400">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold text-sm">David K.</p>
+                                <p class="text-slate-500 text-xs">Ecosystem Lead</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Writing Section -->
+            <section id="writing" class="py-24">
+                <div class="text-center mb-16 fade-up">
+                    <span class="section-badge">Thought Leadership</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-6">Latest Insights</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <a href="https://crypgo.medium.com/the-engine-of-trust-a-deep-dive-into-blockchain-technology-86e6b79e78a9"
+                        target="_blank" class="glass-card p-6 fade-up group hover:border-[#D4AF37]/50 transition">
+                        <div
+                            class="flex items-center gap-2 text-xs text-[#D4AF37] mb-4 font-medium uppercase tracking-wide">
+                            <span>Blockchain</span>
+                            <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#D4AF37] transition">The Engine
+                            of Trust: A Deep Dive into Blockchain Technology</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Exploring how blockchain creates trustless
+                            systems and revolutionizes digital transactions.</p>
+                    </a>
+                    <a href="https://lynxacademy.medium.com/what-determines-the-price-of-cryptocurrencies-21e59feee3f0"
+                        target="_blank" class="glass-card p-6 fade-up group hover:border-[#D4AF37]/50 transition"
+                        data-delay="100">
+                        <div
+                            class="flex items-center gap-2 text-xs text-[#D4AF37] mb-4 font-medium uppercase tracking-wide">
+                            <span>Economics</span>
+                            <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#D4AF37] transition">What
+                            Determines the Price of Cryptocurrencies?</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Understanding the market dynamics, supply and
+                            demand, and factors influencing crypto valuations.</p>
+                    </a>
+                    <a href="https://dekript.medium.com/real-world-assets-rwa-and-blockchain-opening-up-new-opportunities-5323fcdeb121"
+                        target="_blank" class="glass-card p-6 fade-up group hover:border-[#D4AF37]/50 transition"
+                        data-delay="200">
+                        <div
+                            class="flex items-center gap-2 text-xs text-[#D4AF37] mb-4 font-medium uppercase tracking-wide">
+                            <span>RWA</span>
+                            <span class="w-1 h-1 bg-slate-500 rounded-full"></span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#D4AF37] transition">Real World
+                            Assets (RWA) and Blockchain</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">How tokenization is opening new opportunities
+                            for traditional assets on the blockchain.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-24 bg-slate-900/20">
+                <div class="text-center mb-16 fade-up">
+                    <span class="section-badge">Contact</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-6">Let's Build Together</h2>
+                    <p class="text-slate-400 mt-4 max-w-xl mx-auto">Open to discussing strategic partnerships, speaking
+                        opportunities, or technical consultation.</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <form action="https://formspree.io/f/xgvzyowl" method="POST"
+                        class="glass-card p-8 fade-up space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label
+                                    class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Name</label>
+                                <input type="text" name="name" required
+                                    class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition placeholder-slate-600"
+                                    placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Email</label>
+                                <input type="email" name="email" required
+                                    class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition placeholder-slate-600"
+                                    placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Message</label>
+                            <textarea name="message" rows="5" required
+                                class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition resize-none placeholder-slate-600"
+                                placeholder="How can I help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full"><span>Send Message</span></button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-slate-800 mt-12 py-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded bg-slate-800 border border-slate-700 flex items-center justify-center">
+                        <span class="text-[#D4AF37] font-bold font-serif">RJ</span>
+                    </div>
+                    <div>
+                        <p class="text-white font-bold">Richard Joseph</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-wider">Web3 Architect</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://x.com/dekript760" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#D4AF37] hover:text-slate-900 transition"><i
+                            class="fab fa-square-x-twitter"></i></a>
+                    <a href="https://github.com/Ailenmann760" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#D4AF37] hover:text-slate-900 transition"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/richard-joseph-86a82a384" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#D4AF37] hover:text-slate-900 transition"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="text-sm text-slate-600">&copy; 2025 Richard Joseph. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
