@@ -223,6 +223,23 @@
             letter-spacing: 2px;
             color: #3b82f6;
         }
+
+        /* Hero Background Effects */
+        .blue-shadow {
+            filter: drop-shadow(0 0 2rem rgba(59, 130, 246, 0.3));
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
     </style>
 </head>
 
@@ -235,8 +252,8 @@
             <div class="flex items-center justify-between">
                 <a href="#home" class="flex items-center gap-3 group">
                     <div
-                        class="w-10 h-10 rounded bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 flex items-center justify-center group-hover:border-[#3b82f6]/50 transition duration-300">
-                        <span class="text-[#3b82f6] font-bold text-lg font-serif">RJ</span>
+                        class="w-10 h-10 rounded bg-gradient-to-br from-[#3b82f6] to-slate-900 border border-slate-700 flex items-center justify-center group-hover:border-[#3b82f6]/50 transition duration-300">
+                        <span class="text-white font-bold text-lg font-serif">RJ</span>
                     </div>
                     <span
                         class="text-lg font-bold text-slate-200 hidden sm:block tracking-tight group-hover:text-white transition">Richard
@@ -269,8 +286,17 @@
 
         <main>
             <!-- Hero Section -->
-            <section id="home" class="min-h-[80vh] flex items-center py-16">
-                <div class="grid lg:grid-cols-2 gap-16 items-center w-full">
+            <section id="home"
+                class="relative min-h-[85vh] flex items-center py-20 overflow-hidden rounded-3xl border border-slate-800/50 mb-12 shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)]">
+                <!-- Background Image Layer -->
+                <div class="absolute inset-0 z-0">
+                    <img src="header-bg.png" alt=""
+                        class="w-full h-full object-cover opacity-30 saturate-150 transform scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/90 to-transparent"></div>
+                    <div class="hero-glow"></div>
+                </div>
+
+                <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center w-full px-8 md:px-12">
                     <div class="fade-up">
                         <div class="section-badge mb-6">
                             <span class="w-1.5 h-1.5 bg-[#3b82f6] rounded-full animate-pulse"></span>
@@ -312,8 +338,7 @@
                             <div
                                 class="absolute inset-0 bg-gradient-to-tr from-[#3b82f6]/20 to-slate-800/10 rounded-2xl blur-3xl transition duration-700">
                             </div>
-                            <img src="file:///C:/Users/HP/.gemini/antigravity/brain/cabf1c65-50fd-4c44-b4a1-95cc8aaefba0/uploaded_media_1769441458904.jpg"
-                                alt="Richard Joseph"
+                            <img src="headshot.jpg" alt="Richard Joseph"
                                 class="relative w-72 h-72 lg:w-96 lg:h-96 object-cover rounded-2xl border border-slate-800 shadow-2xl mx-auto transition duration-500">
                         </div>
                     </div>
@@ -359,11 +384,13 @@
                             </p>
                             <p class="text-lg leading-relaxed text-slate-300">
                                 My approach is built on "Proof of Work." Whether it's architecting custom L1/L2 networks
-                                like **RedFace** or serving as a **KOL for OKX and MEXC**, I focus on building systems
+                                like <strong>RedFace</strong> or serving as a <strong>KOL for OKX and MEXC</strong>, I
+                                focus on building systems
                                 that drive mass adoption and technical excellence.
                             </p>
                             <p class="text-lg leading-relaxed text-slate-300">
-                                Leadership for me means education. Through **Lynx Web3 Academy**, I've developed
+                                Leadership for me means education. Through <strong>Lynx Web3 Academy</strong>, I've
+                                developed
                                 professional curricula that help transition the next wave of developers into the
                                 blockchain space.
                             </p>
