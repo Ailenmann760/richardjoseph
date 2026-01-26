@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Typing Animation ---
     if (document.getElementById('typing-effect')) {
         const options = {
-            strings: ['Web3 Educator.', 'Blockchain Architect.', 'Strategic Partner.', 'Ecosystem Builder.'],
+            strings: ["Web3 Architect & Ecosystem Builder.", "Full-Stack Dev & AI Specialist.", "Blockchain Educator & Founder.", "KOL at OKX & MEXC Global."],
             typeSpeed: 40,
             backSpeed: 30,
             backDelay: 2000,
