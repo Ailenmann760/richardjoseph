@@ -7,6 +7,8 @@
     <title>Richard Joseph | Software Architect, Web3 Builder, Product Operator</title>
     <meta name="description"
         content="Richard Joseph designs and ships software products across Web3 infrastructure, trading systems, realtime platforms, and product-led web applications.">
+    <link rel="icon" type="image/jpeg" href="headshot.jpg">
+    <link rel="apple-touch-icon" href="headshot.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -91,12 +93,16 @@
             height: 46px;
             border-radius: 50%;
             border: 1px solid var(--line-strong);
-            display: grid;
-            place-items: center;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 1.35rem;
-            font-weight: 700;
+            overflow: hidden;
             background: var(--surface);
+        }
+
+        .brand-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 24%;
+            transform: scale(1.22);
         }
 
         .brand-copy strong {
@@ -526,7 +532,9 @@
         <header class="site-header">
             <div class="topbar">
                 <a href="#home" class="brand">
-                    <div class="brand-mark">RJ</div>
+                    <div class="brand-mark">
+                        <img src="headshot.jpg" alt="Richard Joseph">
+                    </div>
                     <div class="brand-copy">
                         <strong>Richard Joseph</strong>
                         <span>Software architect, Web3 builder, product operator</span>
@@ -806,25 +814,6 @@
                 </div>
 
                 <div class="cards">
-                    <article class="card project-card fade-up">
-                        <div class="project-top">
-                            <div>
-                                <h4>365-Arbitrage</h4>
-                                <div class="meta">P2P crypto arbitrage platform</div>
-                            </div>
-                        </div>
-                        <p>
-                            Documented as a P2P crypto arbitrage platform with Node.js backend services, Prisma,
-                            BullMQ, Socket.IO, deployment guides, and security-focused withdrawal handling.
-                        </p>
-                        <div class="tag-row">
-                            <span class="tag">BullMQ</span>
-                            <span class="tag">Prisma</span>
-                            <span class="tag">Socket.IO</span>
-                            <span class="tag">Docs</span>
-                        </div>
-                    </article>
-
                     <article class="card project-card fade-up" data-delay="60">
                         <div class="project-top">
                             <div>
@@ -899,9 +888,9 @@
                     <div class="inventory-list fade-up">
                         <h3>Detected software repositories</h3>
                         <p>
-                            `365-arbitrage`, `Aflame`, `Daystar`, `nnaemekarichards`, `Packettracer`, `portlyn`,
-                            `propfirm`, `redfaceDocs`, `Redfacenetwork`, `redfacesite`, `Richard`, `richardjoseph`,
-                            `Richie`, `shiller-contest-bot`, `Snapshot`, `Soralink`, `tradingbot`, `Treasurebox`,
+                            `Aflame`, `Daystar`, `nnaemekarichards`, `Packettracer`, `portlyn`, `propfirm`,
+                            `redfaceDocs`, `Redfacenetwork`, `redfacesite`, `Richard`, `richardjoseph`, `Richie`,
+                            `shiller-contest-bot`, `Snapshot`, `Soralink`, `tradingbot`, `Treasurebox`,
                             `wagydog-daap`, `web3africa-website`, `werelookingston`
                         </p>
                         <div class="inventory">
