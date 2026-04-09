@@ -374,7 +374,27 @@
         }
 
         .strip-grid {
+            display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .strip-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .strip-item strong {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-deep);
+        }
+
+        .strip-item span {
+            font-size: 0.94rem;
+            color: var(--ink-soft);
         }
 
         .cards {
@@ -638,12 +658,13 @@
 
             <section class="strip fade-up">
                 <div class="strip-grid">
+                    <div class="strip-item">
                         <strong>Live Deployments</strong>
                         <span>nyxly.io, portlyn.pro, daystarapp.net, redfaceapp.com</span>
                     </div>
                     <div class="strip-item">
                         <strong>Diversified Expertise</strong>
-                        <span>Web3, Mobile Prototypes, Trading Bots, DeFi Infrastructure, documentation</span>
+                        <span>Web3, Mobile Prototypes, Trading Bots, DeFi Infrastructure</span>
                     </div>
                     <div class="strip-item">
                         <strong>Engineering Standard</strong>
